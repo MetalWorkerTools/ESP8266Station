@@ -69,7 +69,7 @@ Software: (Grbl-Panel) http://github.com/Gerritv/Grbl-Panel/wiki
 #define ssid "YourSSID"                //ssid from the router to connect this bridge to
 #define Password "YourPasswordr"       //password on the router to login
 #define ServerPort 23                  //port at wich this brigde listens (23 = telnet port)
-#define HostName"YourHostname"         //the host name of this bridge, you can access this bridge by this name
+#define HostName "YourHostname"        //the host name of this bridge, you can access this bridge by this name
 
 //Remove the two slashes from the next line to disable DNS and use Static IP
 //#define StaticIP
@@ -103,6 +103,7 @@ String ConnectionStatus(byte Status)
     case WL_CONNECTION_LOST: return "connectionlost";
     case WL_DISCONNECTED: return "disconnected"; 
   }
+  return "connection failed";
 }
 void SerialPrint(bool PrintLine,String Line)
 {
